@@ -8,6 +8,9 @@ parser.add_argument("-u", "--url", type=str, required=True)
 parser.add_argument("-w", "--wordlist", type=str, required=True)
 args = parser.parse_args()
 
+if args.url.endswith("/") == False:
+    args.url = args.url + "/"
+
 wordlist = open(args.wordlist, "r")
 
 while True:
