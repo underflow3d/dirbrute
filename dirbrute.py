@@ -14,8 +14,8 @@ if args.url.endswith("/") == False:
 wordlist = open(args.wordlist, "r")
 
 while True:
-    word = wordlist.readline().replace("\n", "")
-    if word == "":
+    word = wordlist.readline().strip()
+    if not word: 
         break
     else:
         url = args.url + word
