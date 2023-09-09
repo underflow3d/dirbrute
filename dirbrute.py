@@ -19,7 +19,7 @@ with open(args.wordlist, "r") as wordlist:
         url = args.url + word
         resp = requests.get(url)
         if resp.status_code in valid_status_codes:
-            print(f"Found: {url}, status code {resp.status_code}")
+            print(f"Found: {url}, Status code: {resp.status_code}")
         else:
             continue
 
